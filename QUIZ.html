@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+</head>
+<body>
+    <h1>ayooo jawab quizz</h1>
+    <label>1. Siapakah Penemu Lampu</label><br>
+    Jawab : <input type="text" id="penemulampu"><br> 
+    <div id="penemulampu_response"></div>
+    <label>2. Batik Berasal Dari Negara</label><br>
+    Jawab : <input type="text" id="batik"><br> 
+    <div id="batik_response"></div>
+    <label>3. Sila Ketiga Dari Pancasila</label><br>
+    Jawab : <input type="text" id="pancasila"><br> 
+    <div id="pancasila_response"></div>
+    <label>4. Kepanjangan Dari GBK</label><br>
+    Jawab : <input type="text" id="gbk"><br> 
+    <div id="gbk_response"></div>
+    <br>
+    <button onclick="cek_jawaban()">Kirim</button>
+    <script>
+        function cek_jawaban(){
+            const penemulampu = document.querySelector('#penemulampu')
+            const penemulampu_response = document.querySelector('#penemulampu_response')
+            const batik = document.querySelector('#batik')
+            const batik_response = document.querySelector('#batik_response')
+            const pancasila = document.querySelector('#pancasila')
+            const pancasila_response = document.querySelector('#pancasila_response')
+            const gbk = document.querySelector('#gbk')
+            const gbk_response = document.querySelector('#gbk_response')
+
+            if(penemulampu.value == 'thomas alva edison'){
+                penemulampu_response.innerHTML = 'Jawaban Kamu Benar'
+                penemulampu_response.style = "color: green;"
+            }else{
+                penemulampu_response.innerHTML = 'Jawaban Kamu Salah'
+                penemulampu_response.style = "color: red;"
+            }
+            if(batik.value == 'indonesia'){
+                batik_response.innerHTML = 'Jawaban Kamu Benar'
+                batik_response.style = "color: green;"
+            }else{
+                batik_response.innerHTML = 'Jawaban Kamu Salah'
+                batik_response.style = "color: red;"
+            }
+            if(pancasila.value == 'persatuan indonesia'){
+                pancasila_response.innerHTML = 'Jawaban Kamu Benar'
+                pancasila_response.style = "color: green;"
+            }else{
+                pancasila_response.innerHTML = 'Jawaban Kamu Salah'
+                pancasila_response.style = "color: red;"
+            }
+            if(gbk.value == 'gelora bung karno'){
+                gbk_response.innerHTML = 'Jawaban Kamu Benar'
+                gbk_response.style = "color: green;"
+            }else{
+                gbk_response.innerHTML = 'Jawaban Kamu Salah'
+                gbk_response.style = "color: red;"
+            }
+        }
+    </script>
+</body>
+</html>
